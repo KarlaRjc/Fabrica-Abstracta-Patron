@@ -15,7 +15,7 @@ namespace AbstractFactory.BasesDeDatosConexion
 
         public override String descripcion()
         {
-            return "Conectado a la Base de Datos MYSQL";
+            return "Conectado a la Base de Datos Postgresql";
         }
     }
 }

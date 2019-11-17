@@ -24,7 +24,9 @@ namespace AbstractFactory
 
             miFabrica = new ConexionFabrica(tipo);
             miConexion = miFabrica.CreaConexion();
-            Console.WriteLine("Estás conectado con la Base de datos: " + miConexion.descripcion());
+            String salida=("Estás conectado con la Base de datos: " + miConexion.descripcion());
+            Console.Write(salida);
+            Console.ReadLine();
         }
     }
 }

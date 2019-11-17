@@ -8,29 +8,31 @@ namespace AbstractFactory.Fabrica
 {
     class ConexionFabrica
     {
-        protected String tipoConexion;
+        public String tipoConexion;
 
         public ConexionFabrica(String tipoConexion) {
             this.tipoConexion = tipoConexion;
         }
 
-        public Conexion CreaConexion() {
-            if (tipoConexion.ToLower().Equals("Oracle")) {
+        public Conexion CreaConexion()
+        {
+            if (tipoConexion.ToLower().Equals("Oracle"))
+            {
                 return new OracleConexion();
             }
-            else if (tipoConexion.ToLower().Equals("SQLServer"))
+             else if(tipoConexion.ToLower().Equals("SQLServer"))
             {
                 return new SQLServerConexion();
             }
-            else if (tipoConexion.ToLower().Equals("PostgreSQL"))
+            else if(tipoConexion.ToLower().Equals("PostgreSQL"))
             {
                 return new PostgresqlConexion();
             }
-            else
+           
+            else 
             {
                 return new MySQLConexion();
             }
-          
         }
     }
 }
