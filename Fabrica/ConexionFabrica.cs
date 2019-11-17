@@ -14,7 +14,7 @@ namespace AbstractFactory.Fabrica
             this.tipoConexion = tipoConexion;
         }
 
-        protected Conexion CreaConexion() {
+        public Conexion CreaConexion() {
             if (tipoConexion.ToLower().Equals("Oracle")) {
                 return new OracleConexion();
             }
