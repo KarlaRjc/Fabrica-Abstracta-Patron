@@ -16,7 +16,7 @@ namespace AbstractFactory.Fabrica
 
         protected Conexion CreaConexion() {
             if (tipoConexion.ToLower().Equals("Oracle")) {
-               //retorna conexion con oracle
+                return new OracleConexion();
             }
             else if (tipoConexion.ToLower().Equals("SQLServer"))
             {
@@ -24,7 +24,7 @@ namespace AbstractFactory.Fabrica
             }
             else if (tipoConexion.ToLower().Equals("PostgreSQL"))
             {
-              //retorna conexion con PostgreSQL
+                return new PostgresqlConexion();
             }
             else
             {
