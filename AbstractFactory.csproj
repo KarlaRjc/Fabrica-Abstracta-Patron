@@ -46,6 +46,7 @@
     <Compile Include="BasesDeDatosConexion\Conexion.cs" />
     <Compile Include="BasesDeDatosConexion\MySQLConexion.cs" />
     <Compile Include="BasesDeDatosConexion\OracleConexion.cs" />
+    <Compile Include="BasesDeDatosConexion\PostgresqlConexion.cs" />
     <Compile Include="BasesDeDatosConexion\SQLServerConexion.cs" />
     <Compile Include="Fabrica\FabricaAbstracta.cs" />
     <Compile Include="Fabrica\ConexionFabrica.cs" />
