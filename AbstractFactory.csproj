@@ -49,7 +49,7 @@
     <Compile Include="BasesDeDatosConexion\PostgresqlConexion.cs" />
     <Compile Include="BasesDeDatosConexion\SQLServerConexion.cs" />
     <Compile Include="Fabrica\FabricaAbstracta.cs" />
-    <Compile Include="Fabrica\ConexionFabrica.cs" />
+    <Compile Include="Fabrica\FabricaConex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

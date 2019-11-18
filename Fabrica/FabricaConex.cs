@@ -4,32 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AbstractFactory.BasesDeDatosConexion;
+
 namespace AbstractFactory.Fabrica
 {
-    class ConexionFabrica
+    public class FabricaConex : FabricaAbstracta
     {
-        public String tipoConexion;
+        private string tipo;
 
-        public ConexionFabrica(String tipoConexion) {
-            this.tipoConexion = tipoConexion;
+        public FabricaConex(string tipo)
+        {
+            this.tipo = tipo;
         }
 
-        public Conexion CreaConexion()
+        public override Conexion CreaConexion(string tipo)
         {
-            if (tipoConexion.ToLower().Equals("Oracle"))
+            tipo = tipo.ToLower();
+            if (tipo.Equals("oracle"))
             {
+
                 return new OracleConexion();
             }
-             else if(tipoConexion.ToLower().Equals("SQLServer"))
+            if (tipo.Equals("sqlserver"))
             {
+
                 return new SQLServerConexion();
             }
-            else if(tipoConexion.ToLower().Equals("PostgreSQL"))
+            if (tipo.Equals("postgresql"))
             {
+
                 return new PostgresqlConexion();
             }
-           
-            else 
+            else
             {
                 return new MySQLConexion();
             }

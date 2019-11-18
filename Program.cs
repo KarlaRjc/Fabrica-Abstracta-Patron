@@ -14,16 +14,18 @@ namespace AbstractFactory
         static void Main(string[] args)
         {
             String tipo;
-
-            ConexionFabrica miFabrica;
+            FabricaConex miFabrica;
             Conexion miConexion;
 
             Console.WriteLine("Digite la Base de Datos que quiere conectarse.");
 
             tipo = Console.ReadLine();
 
-            miFabrica = new ConexionFabrica(tipo);
-            miConexion = miFabrica.CreaConexion();
+            miFabrica = new FabricaConex(tipo);
+
+
+
+            miConexion = miFabrica.CreaConexion(tipo);
             String salida=("Estás conectado con la Base de datos: " + miConexion.descripcion());
             Console.Write(salida);
             Console.ReadLine();
